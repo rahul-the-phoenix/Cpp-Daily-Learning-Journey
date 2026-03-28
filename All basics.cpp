@@ -1,8 +1,25 @@
-#include <iostream>
-using namespace std;
+#include <iostream>  // taking input output  cin   cout   cerr  clog 
+#include <cstdio> // for using like C    printf()  scanf()   fprintf()    fscanf()
+
+// #include <format>       // is used for modern, clean, and type-safe formatted output 
+                            // in C++. like python {} not supported in old version
+
+using namespace std;  // C++ build in library stay here ( Library Container )    shortly use std:: (  std::cin  or  std::cout )
 
 int main() {
+	
+	std::cout<<"i am a man \n";   // use when (  using namespace std ) not mentioned 
+    cout <<"i am learning cpp\n";  //printing 
+    
+    int rollnumber= 23;  
+    cout<<"my roll no is : " <<rollnumber << endl;        //endl is for instant data flash , slower then \n
 
+    
+//    string name = "Rahul";
+//     int roll = 23;
+//     cout << format("Name: {}, Roll: {}", name, roll);         // using <format> formatting (not supported in old version)
+
+   
     //  1. Variables & Data Types
     int a = 10;           // Integer
     float b = 5.5;        // Float
@@ -24,7 +41,7 @@ int main() {
 
 
     // 3. Operators
-    cout << "\nOperators:\n";
+    cout << "\nOperators(a=10 & number entered ):\n";
 
     // Arithmetic
     cout << "Addition: " << a + num << endl;
@@ -48,19 +65,6 @@ int main() {
         cout << "Even Number\n";
     } else {
         cout << "Odd Number\n";
-    }
-
-
-    // 5. Nested If
-    cout << "\nNested If:\n";
-    if (num > 0) {
-        if (num % 2 == 0) {
-            cout << "Positive Even\n";
-        } else {
-            cout << "Positive Odd\n";
-        }
-    } else {
-        cout << "Number is Zero or Negative\n";
     }
 
 
@@ -94,7 +98,7 @@ int main() {
     int i = 1;
     while (i <= 5) {
         cout << i << " ";
-        i++;
+        i++; 
     }
 
 
