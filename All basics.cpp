@@ -51,12 +51,16 @@ int main() {
     cout << "Modulus: " << a % num << endl;
 
     // Relational
-    cout << "a > num: " << (a > num) << endl;
-    cout << "a == num: " << (a == num) << endl;
+	int age ;
+	cout << "enter the age: ";
+	cin>> age;
+	cout << "age >= 18: " << (age >= 18) << endl;     //return 1 if true else 0 if false
+	cout << "age < 18: " << (age < 18) << endl;
 
     // Logical
-    cout << "(a > 5 && num > 5): " << (a > 5 && num > 5) << endl;
-    cout << "(a < 5 || num > 5): " << (a < 5 || num > 5) << endl;
+    cout << "(a > 5 && num > 5): " << (a > 5 && num > 5) << endl;     // && both true then 1 else 0
+    cout << "(a < 5 || num > 5): " << (a < 5 || num > 5) << endl;    // || 1 if atleast one of these is true
+	 cout << "(a < 5 || num > 5): " << (a < 5 ^ num > 5) << endl;   //  ^ if both are true or false then 0 else 1
 
 
     // 4. If-Else
@@ -67,6 +71,8 @@ int main() {
         cout << "Odd Number\n";
     }
 
+// Ternary Operator            //condition ? value_if_true : value_if_false;
+cout << (age >= 18 ? " You are Adult" : " You are Minor");     
 
     // 6. Switch Case
     cout << "\nSwitch Case:\n";
