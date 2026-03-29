@@ -1,6 +1,8 @@
 #include <iostream>  // taking input output  cin   cout   cerr  clog 
 #include <cstdio> // for using like C    printf()  scanf()   fprintf()    fscanf()
-
+#include<cmath>  // for math operation sqrt() , pow() , abs() 
+#include <cstdlib>   //for dynnamic memory allocation , random number genarator , colours 
+#include<ctime>     // for random number seeding , current time cheaking 
 // #include <format>       // is used for modern, clean, and type-safe formatted output 
                             // in C++. like python {} not supported in old version
 
@@ -14,7 +16,7 @@ int main() {
 	
     int rollnumber= 23;  
     cout<<"\nmy roll no is : " <<rollnumber << endl;        //endl is for instant data flash , slower then \n
-    printf("\nmy roll no is %d",rollnumber);     //usecase of cstudio 
+    printf("\nmy roll no is %d\n",rollnumber);     //usecase of cstudio 
     
 //    string name = "Rahul";
 //     int roll = 23;
@@ -35,21 +37,24 @@ int main() {
 
 
     //  2. Input / Output
-    int num;
-    cout << "\nEnter a number: ";
+    int num,num2;
+    cout << "\nEnter first number: ";
     cin >> num;
-    cout << "You entered: " << num << endl;
+    cout << "Enter second number: ";
+    cin >> num2;
+    cout << "You entered: "<< num <<" and " << num2 << endl;
 
 
     // 3. Operators
-    cout << "\nOperators(a=10 & number entered ):\n";
+    cout << "\nOperators:\n";
 
     // Arithmetic
-    cout << "Addition: " << a + num << endl;
-    cout << "Subtraction: " << a - num << endl;
-    cout << "Multiplication: " << a * num << endl;
-    cout << "Division: " << a / num << endl;
-    cout << "Modulus: " << a % num << endl;
+    cout << "Addition: " << num + num2  << endl;
+    cout << "Subtraction: " << num - num2 << endl;
+    cout << "Multiplication: " << num2 * num << endl;
+    cout << "Division: " << num / num2 << endl;
+    cout << "Modulus: " << num % num2 << endl;
+    
 
     // Relational
 	int age ;
@@ -59,46 +64,53 @@ int main() {
 	cout << "age < 18: " << (age < 18) << endl;
 
     // Logical
+	cout<<"\nvalue of a is: " << a << "and num is: " << num <<endl;   
     cout << "(a > 5 && num > 5): " << (a > 5 && num > 5) << endl;     // && both true then 1 else 0
     cout << "(a < 5 || num > 5): " << (a < 5 || num > 5) << endl;    // || 1 if atleast one of these is true
 	 cout << "(a < 5 || num > 5): " << (a < 5 ^ num > 5) << endl;   //  ^ if both are true or false then 0 else 1
 
 
     // 4. If-Else
-	int num2;
+	int num4;
     cout << "\nIf-Else:\n";
 	cout<<"enter the number to cheak even or odd: ";
 	cin>> num2;
-    if (num2 % 2 == 0) {
+    if (num4 % 2 == 0) {
         cout << "Even Number\n";
     } else {
         cout << "Odd Number\n";
     }
 
 	// Ternary Operator            //condition ? value_if_true : value_if_false;
-	cout << (age >= 18 ? " You are Adult" : " You are Minor");     
+	int marks;
+	cout<<"\nenter the marks of your math exam : ";
+	cin>> marks;
+	cout << (marks >= 33 ? " You passed the exam " : " sorry!  You failed ");     
 	int temp;
 	cout << "\nenter the temperature today: ";
 	cin >> temp;
 	cout << (temp<= 10 ? "verycold" : temp <=20 ? "normal" : temp<=30 ? "worm" : "very worm");    //best application of ternary operator
 
-    // 6. Switch Case
+    
+       // 6. Switch Case
     cout << "\nSwitch Case:\n";
+    int num3 = 5;
+    cout <<"the number is: " << num3;
     int choice;
-    cout << "1. Add\n2. Sub\nenter your choice: ";
+    cout << "1. Square\n2. Cube \nenter your choice: ";
     cin >> choice;
 
     switch(choice) {
         case 1:
-            cout << "Result: " << a + num << endl;
+            cout << "Result: " << pow(num3,2) << endl;
             break;
         case 2:
-            cout << "Result: " << a - num << endl;
+            cout << "Result: " << pow(num3,3) << endl;
             break;
         default:
             cout << "Invalid Choice\n";
     }
-
+    
 
     // 7. For Loop
     cout << "\nFor Loop:\n";   
@@ -134,6 +146,13 @@ int main() {
         }
 		cout << i << " ";   //printing 
     }
+    
+    srand(time(0));   // time seeding 
+    int low=25 ,high=75;
+    cout<<"\n the low : = " << low <<" and high is "<<high<<endl;
+    cout << "A random number between 0 to 100 is:  " << rand() % 101;       // 0 to 100 random number 
+    printf("\nA random number between low and high is ", rand()%(high-low+1)+ low )   //random betwwen two number 
+    
 		
     return 0;
 }
