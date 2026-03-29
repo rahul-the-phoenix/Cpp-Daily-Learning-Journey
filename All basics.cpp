@@ -22,6 +22,7 @@
 #include<cmath>  // for math operation sqrt() , pow() , abs() 
 #include <cstdlib>   //for dynnamic memory allocation , random number genarator , colours 
 #include<ctime>     // for random number seeding , current time cheaking 
+#include <unistd.h> // for sleep()
 // #include <format>       // is used for modern, clean, and type-safe formatted output 
                             // in C++. like python {} not supported in old version
 
@@ -34,7 +35,7 @@ int main() {
     printf("hello! i am rahul");   // use case of cstudio
 	
     int rollnumber= 23;  
-    cout<<"\nmy roll no is : " <<rollnumber << endl;        //endl is for instant data flash , slower then \n
+    cout<<"\nmy roll no is : " <<rollnumber << endl;        //endl = newline + buffer flush    \n = only newline (faster)
     printf("\nmy roll no is %d\n",rollnumber);     //usecase of cstudio 
     
 //    string name = "Rahul";
@@ -77,7 +78,7 @@ int main() {
 
     // Relational
 	int age ;
-	cout << "enter the age: ";
+	cout << "\nenter the age: ";
 	cin>> age;
 	cout << "age >= 18: " << (age >= 18) << endl;     //return 1 if true else 0 if false
 	cout << "age < 18: " << (age < 18) << endl;
@@ -93,7 +94,7 @@ int main() {
 	int num4;
     cout << "\nIf-Else:\n";
 	cout<<"enter the number to cheak even or odd: ";
-	cin>> num2;
+	cin>> num4;
     if (num4 % 2 == 0) {
         cout << "Even Number\n";
     } else {
@@ -104,17 +105,17 @@ int main() {
 	int marks;
 	cout<<"\nenter the marks of your math exam : ";
 	cin>> marks;
-	cout << (marks >= 33 ? " You passed the exam " : " sorry!  You failed ");     
+	cout << (marks >= 33 ? "You passed the exam\n" : "sorry! You failed\n ");     
 	int temp;
 	cout << "\nenter the temperature today: ";
 	cin >> temp;
 	cout << (temp<= 10 ? "verycold" : temp <=20 ? "normal" : temp<=30 ? "worm" : "very worm");    //best application of ternary operator
-
+    cout<<endl;
     
        // 6. Switch Case
     cout << "\nSwitch Case:\n";
     int num3 = 5;
-    cout <<"the number is: " << num3;
+    cout <<"the number is: " << num3<<endl;
     int choice;
     cout << "1. Square\n2. Cube \nenter your choice: ";
     cin >> choice;
@@ -157,6 +158,8 @@ int main() {
 
 	//break and continue 
 	i=0;
+	cout<<"\n\nunderstanding break and continue statement: \n";
+	cout<<"continue : ";
 	while (i < 10) {
         i++; // Increment i before the condition to avoid an infinite loop
         if (i == 3) {  // Skip the current iteration when i is 3
@@ -168,10 +171,23 @@ int main() {
     
     srand(time(0));   // time seeding 
     int low=25 ,high=75;
-    cout<<"\n the low : = " << low <<" and high is "<<high<<endl;
+    cout << endl <<"\nthe low : = " << low <<" and high is "<< high << endl;
     cout << "A random number between 0 to 100 is:  " << rand() % 101;       // 0 to 100 random number 
-    printf("\nA random number between low and high is ", rand()%(high-low+1)+ low )   //random betwwen two number 
+    printf("\nA random number between low and high is %d ", rand()%(high-low+1)+ low );  //random betwwen two number 
     
-		
+	cout<<"\nit's colour time\n";
+	cout << "\033[1;91m \nI am Rahul. ";     // Bright Red + Bold
+    cout << "\033[1;92m \nI have a pen. ";   // Bright Green + Bold
+    cout << "\033[1;93m \nI have a dog. ";   // Bright Yellow + Bold
+    cout << "\033[1;96m \nI am a man. ";     // Bright Cyan + Bold
+    cout << "\033[0m";                     // Reset	to black
+    cout <<"\nI am again black\n";
+    
+    cout<<"\nit's the sleep time"<<endl;
+    cout << "Wait for 5 second \n";
+    sleep(5); // 2 seconds wait
+    //usleep(500000); // 0.5 second (500000 microseconds)
+    cout << "5 second complete";
+    
     return 0;
 }
