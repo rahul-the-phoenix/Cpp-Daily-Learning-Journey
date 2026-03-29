@@ -1,3 +1,22 @@
+// -------------C++ OVERVIEW IN DETAILS------------------
+
+// Founder: Bjarne Stroustrup.
+// Core Idea: It is an extension of the C language, adding Object-Oriented Programming (OOP) features.
+// GAME DEVLOPMENT , HIGH SPEED , IoT DEVLOPMENT , ROBOTICS , WEB BROWSERS
+
+// Operating Systems: Windows, macOS, and parts of Linux are written in C++.
+// Game Development: Powers major engines like Unreal Engine (used in games like PUBG and Fortnite).
+// Browsers: Google Chrome, Firefox, and Safari use C++ for their rendering engines.
+// High-Performance Apps: Used in Adobe Photoshop, Spotify, and YouTube's backend.
+// Compilers: Many other programming language compilers are written in C++.
+
+// Main Features
+// Speed: Extremely fast because it is close to hardware.
+// OOP: Supports Classes, Objects, Inheritance, and Polymorphism.
+// Memory Control: Allows manual memory management using Pointers.
+// Portability: Code can run on different platforms with minor changes.
+
+
 #include <iostream>  // taking input output  cin   cout   cerr  clog 
 #include <cstdio> // for using like C    printf()  scanf()   fprintf()    fscanf()
 #include<cmath>  // for math operation sqrt() , pow() , abs() 
