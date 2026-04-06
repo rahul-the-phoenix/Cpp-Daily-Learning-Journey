@@ -1,25 +1,26 @@
-A vector is a dynamic array in C++ that can change its size automatically when we add or remove elements. 
-It stores elements in continuous memory like an array.
+// A vector is a dynamic array in C++ that can change its size automatically when we add or remove elements. 
+// It stores elements in continuous memory like an array.
 
-We use vectors because we don’t need to fix the size beforehand. It automatically manages memory, is easy to use, 
-and provides many built-in functions like push_back(), pop_back(), etc.
+// We use vectors because we don’t need to fix the size beforehand. It automatically manages memory, is easy to use, 
+// and provides many built-in functions like push_back(), pop_back(), etc.
 
-Vectors are used to store a list of numbers or data, take user input of unknown size, and solve problems 
-in coding like searching, sorting, and DSA problems
+// Vectors are used to store a list of numbers or data, take user input of unknown size, and solve problems 
+// in coding like searching, sorting, and DSA problems
 
 //=================   VECTOR OPERATIONS   ==========================
 
+
 // vector<int> v2;         // creating a integer vector name v2
-v.push_back() → adds element at the end
-v.empty() → checks if vector is empty (true/false)
-v.size() → returns number of elements
-v.capacity() → returns allocated memory size
-v.back() → returns last element
-v.pop_back() → removes last element
-v.begin() → points to first element
-v.end() → points after last element
-v.insert() → inserts element at given position
-v.clear() → removes all elements
+// v.push_back() → adds element at the end
+// v.empty() → checks if vector is empty (true/false)
+// v.size() → returns number of elements
+// v.capacity() → returns allocated memory size
+// v.back() → returns last element
+// v.pop_back() → removes last element
+// v.begin() → points to first element
+// v.end() → points after last element
+// v.insert() → inserts element at given position
+// v.clear() → removes all elements
 
 
 #include <iostream>
