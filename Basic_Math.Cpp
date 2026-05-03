@@ -85,4 +85,15 @@ int lcm = (num * num2) / gcd(num, num2);
 cout << lcm;
 
 
+//===================== BETTER LOGIC =========================
+
+int gcd(int a, int b) {
+   while(a>0 && b>0){
+      a>b ? a = a%b : b = b%a;
+   }
+   if(a==0) return b ;
+   return a;
+}
+
+
 }
