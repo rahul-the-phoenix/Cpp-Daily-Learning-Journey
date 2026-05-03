@@ -46,7 +46,14 @@ while(num >0){
 }
 num2==sum ? cout <<"armstrong" : cout <<" not";
 
+// ============== find all the divisiors  =====================================
 
+  int num =600;
+for(int i=1;i<=sqrt(num);i++){               //till squre root of number the loop will run 
+    if(num%i==0){
+        cout << i <<" " << num/i << " ";
+    }
+}
 
 
 
