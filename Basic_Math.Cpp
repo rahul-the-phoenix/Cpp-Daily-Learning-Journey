@@ -34,7 +34,17 @@ cin >> num
 
 num2==rev ? cout<<"palindrome" : cout <<"not";         //compare
 
+//====================  armstrong number cheaking ====================
 
+  int num =371;
+  int num2=num;
+int s= log10(num)+1;     // total number of digit 
+int sum=0;
+while(num >0){
+  sum+=pow((num%10),s);    //armstrong number logic
+  num=num/10;
+}
+num2==sum ? cout <<"armstrong" : cout <<" not";
 
 
 
