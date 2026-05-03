@@ -20,4 +20,25 @@ cin >> num
  cout<<rev;        //print reverse 
 
 
+
+//=======================  palindrome or not  ================
+
+  int num =3883;
+  int num2=num;            //copy to num2 for save he number 
+   int rev=0;
+ while(num>0){
+     int c= num%10;
+     rev= (rev*10)+c;           //find reverse 
+     num=num/10;
+ }
+
+num2==rev ? cout<<"palindrome" : cout <<"not";         //compare
+
+
+
+
+
+
+
+
 }
