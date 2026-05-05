@@ -1,7 +1,7 @@
 RULES:- for the outer loop count the number of lines 
 the nested loop is actually prints the stars or numbers 
 break down the problem for complex patterns 
-
+ cout << (char)(64 + j); use this for A B C D format 
 
 
 
