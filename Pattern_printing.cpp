@@ -1,3 +1,10 @@
+RULES:- for the outer loop count the number of lines 
+the nested loop is actually prints the stars or numbers 
+break down the problem for complex patterns 
+
+
+
+
 // easy 1 : 
 // 1 
 // 1 2 
@@ -77,6 +84,23 @@ for(i=n;i>=1;i--){
     cout <<"\n";
 }
 
+
+// medium 1 
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+
+for(int i=0;i<n;i++){
+     for(int j=0;j<n-i-1;j++){
+         cout << " ";
+     }
+     for( int j = 0;j<2*i+1;j++){
+         cout <<"*";
+     }
+     cout << "\n";
+ }
 
 
 
