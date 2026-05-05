@@ -2,7 +2,7 @@ RULES:- for the outer loop count the number of lines
 the nested loop is actually prints the stars or numbers 
 break down the problem for complex patterns 
  cout << (char)(64 + j); use this for A B C D format 
-
+When you're printing spaces in a pattern, replace the space with any other symbol like this  "-",  it helps in understanding what we are doing.
 
 
 // easy 1 : 
@@ -194,3 +194,14 @@ for(int i=1;i<=n;i++){
  
     cout <<"\n";
 }
+
+// medium 6 (small but tricky)
+// 5
+// 54
+// 543
+// 5432
+// 54321
+for(int i=n-1;i>=0;i--){
+    for(int j= 0;j<=n-i-1;j++){
+        cout <<n-j;
+    }
