@@ -205,3 +205,29 @@ for(int i=n-1;i>=0;i--){
     for(int j= 0;j<=n-i-1;j++){
         cout <<n-j;
     }
+
+
+// medium 8
+// * * * * * 
+// *       *
+// *       *
+// *       *
+// * * * * * 
+
+for( i = 1 ;i<=n ;i++){
+    if( i==1 || i==n ){
+        for(int j = 1;j<=n; j++){
+            cout <<"* " ;
+    }
+    cout << endl;
+    }
+    else {
+        cout <<"*";
+        for(int j = 1 ;j <= n-2 ;j++){
+            cout << "  ";
+        }
+        cout <<" *";
+        cout << endl;
+    }
+    
+}
