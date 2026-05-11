@@ -62,3 +62,25 @@ for( int i=1;i<=n/2;i++){
 for(int i= n/2+1 ;i<=n;i++){
     cout <<"*" << endl;
 }
+
+//=======================RRRRRRRRRRRRRRRRRRRRRRRRRRR==============================
+int  count =1;
+
+for( int i=1;i<=n/2+1;i++){
+    if(i==1 || i==n/2+1){
+        for(int j=1;j<=n;j++)if (j%2==1)cout <<"*"; else cout <<" ";
+    }else{
+        for(int j=1;j<=n;j++){
+            if( j==1 || j==n) cout << "*";
+            else cout <<" ";
+        }
+    }
+    cout << endl;
+}
+for(int i= n/2+2 ;i<=n;i++){
+    for( int j=1;j<=n;j++){
+        if(j==1 || j==2*count+1) cout <<"*"; else cout <<" ";
+    }
+    count+=1;
+    cout << endl;
+}
