@@ -1,0 +1,27 @@
+
+//=======================================KKKKKKKKKKKKKKKKKKKKKKK---------------------------------------
+int n;
+cout <<"enter the size: ";
+cin >>n;
+int  count =0;
+
+for( int i=1;i<=n/2 +1 ;i++){
+    cout << "* ";
+    for(int j=1;j<=n/2 -i;j++){
+        cout << "  ";
+    }
+    if(i<n/2+1){
+        cout <<" *";
+    }
+    cout <<"\n";
+}
+
+for( int i=n/2 +2 ;i<=n;i++){
+    cout << "* ";
+    for(int j=1;j<=count;j++){
+        cout << "  ";
+    }
+    count+=1;
+    cout <<" *";
+    cout << "\n";
+}
