@@ -84,3 +84,23 @@ for(int i= n/2+2 ;i<=n;i++){
     count+=1;
     cout << endl;
 }
+
+//============================SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS==========================
+int s=log2(n);
+
+
+for(int i=1;i<=n;i++){
+    if(i==1 || i==n || i==n/2+1){
+        for(int j=1;j<=n;j++) if (j%2==1)cout <<"*"; else cout <<" ";
+    }else if(i<=n/2 && i>=n/2-s) cout <<"*" ;
+    else if( i>=n/2 && i<=n/2+s){
+        for(int j=1;j<=n;j++){
+            if(j==n) cout <<"*"; else cout <<" "; }
+    }
+    else{
+        for( int j=1;j<=n;j++){
+            if(j==1 || j==n) cout <<"*"; else cout <<" ";
+        }
+    }
+    cout << endl;
+}
